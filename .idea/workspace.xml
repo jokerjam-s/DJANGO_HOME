@@ -4,11 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fce70bd1-6474-435c-8010-993a2c9918ba" name="Changes" comment="" />
+    <list default="true" id="fce70bd1-6474-435c-8010-993a2c9918ba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_first/logs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_first/work_01_app/management/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_first/work_01_app/management/commands/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_first/work_01_app/management/commands/client_add.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DJANGO_HOME.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DJANGO_HOME.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/models.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,9 +46,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "work__02",
-    "last_opened_file_path": "D:/GB_Projects/DJANGO_HOME",
+    "last_opened_file_path": "D:/GB_HomeWork/DJANGO_HOME",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,6 +74,7 @@
       <workItem from="1695495808820" duration="3916000" />
       <workItem from="1695501829040" duration="5137000" />
       <workItem from="1695701184560" duration="652000" />
+      <workItem from="1695804382564" duration="9492000" />
     </task>
     <servers />
   </component>
