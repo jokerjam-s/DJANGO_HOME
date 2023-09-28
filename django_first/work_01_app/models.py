@@ -7,8 +7,8 @@ class Client(models.Model):
     client_name = models.CharField(max_length=100, null=False)
     email = models.EmailField()
     password = models.CharField(max_length=100, null=False)
-    phone = models.CharField(max_length=50)
-    address = models.TextField()
+    phone = models.CharField(max_length=50, null=True)
+    address = models.TextField(null=True)
     reg_date = models.DateField(auto_now_add=True)  # фиксируем создание
 
     def __str__(self):
@@ -26,7 +26,7 @@ class Client(models.Model):
 class Product(models.Model):
     """Товары, реализуемые в магазине."""
     prod_name = models.CharField(max_length=250, null=False)
-    description = models.TextField()
+    description = models.TextField(null=True)
     price = models.DecimalField(max_digits=8, decimal_places=2, default=0, validators=[MinValueValidator(0)])
     prod_count = models.IntegerField(default=0, validators=[MinValueValidator(0)])
     append_date = models.DateTimeField(auto_now=True)  # фиксируем последнее изменение

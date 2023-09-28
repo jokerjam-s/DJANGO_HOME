@@ -13,12 +13,12 @@ class Command(BaseCommand):
         parser.add_argument('-a', '--address', type=str, help='Адрес')
 
     def handle(self, *args, **options):
-        client_name = options['name']
-        email = options['email']
-        password = options['password']
-        phone = options['phone']
-        address = options['address']
+        client_name = options.get('name')
+        email = options.get('email')
+        password = options.get('password')
+        phone = options.get('phone')
+        address = options.get('address')
 
         client = Client(client_name=client_name, email=email, password=password, phone=phone, address=address)
-        # client.save()
+        client.save()
         self.stdout.write(f'{client}')

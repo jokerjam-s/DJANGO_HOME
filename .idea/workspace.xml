@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fce70bd1-6474-435c-8010-993a2c9918ba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_first/work_01_app/management/commands/client_delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_first/work_01_app/management/commands/client_update.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_readme/img_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_readme/img_05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c73e4a3-9c8b-41ea-8c23-13d90834125e.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c73e4a3-9c8b-41ea-8c23-13d90834125e/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c20afacd-b489-4c02-b2f4-6a8d1905ab2d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c20afacd-b489-4c02-b2f4-6a8d1905ab2d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c20afacd-b489-4c02-b2f4-6a8d1905ab2d/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c20afacd-b489-4c02-b2f4-6a8d1905ab2d/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_first/work_01_app/management/commands/client_add.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/management/commands/client_add.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_first/work_01_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,29 +45,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "work__02",
-    "last_opened_file_path": "D:/GB_HomeWork/DJANGO_HOME",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.black.configuration.BlackFormatterConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;work__02&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GB_HomeWork/DJANGO_HOME&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GB_HomeWork\DJANGO_HOME\img_readme" />
       <recent name="D:\GB_Projects\DJANGO_HOME\img_readme" />
     </key>
   </component>
@@ -77,6 +85,9 @@
       <workItem from="1695701184560" duration="652000" />
       <workItem from="1695804382564" duration="9492000" />
       <workItem from="1695874335507" duration="2525000" />
+      <workItem from="1695882457254" duration="3830000" />
+      <workItem from="1695886780948" duration="143000" />
+      <workItem from="1695886936671" duration="2869000" />
     </task>
     <servers />
   </component>
