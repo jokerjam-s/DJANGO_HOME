@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fce70bd1-6474-435c-8010-993a2c9918ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_first/logs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_first/work_01_app/management/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_first/work_01_app/management/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_first/work_01_app/management/commands/client_add.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DJANGO_HOME.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DJANGO_HOME.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c20afacd-b489-4c02-b2f4-6a8d1905ab2d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c20afacd-b489-4c02-b2f4-6a8d1905ab2d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c20afacd-b489-4c02-b2f4-6a8d1905ab2d/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c20afacd-b489-4c02-b2f4-6a8d1905ab2d/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/management/commands/client_add.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/management/commands/client_add.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_first/work_01_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +52,11 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "com.jetbrains.python.black.configuration.BlackFormatterConfigurable",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -75,6 +76,7 @@
       <workItem from="1695501829040" duration="5137000" />
       <workItem from="1695701184560" duration="652000" />
       <workItem from="1695804382564" duration="9492000" />
+      <workItem from="1695874335507" duration="2525000" />
     </task>
     <servers />
   </component>

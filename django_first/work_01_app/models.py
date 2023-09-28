@@ -12,7 +12,7 @@ class Client(models.Model):
     reg_date = models.DateField(auto_now_add=True)  # фиксируем создание
 
     def __str__(self):
-        return f'{self.name}, email. {self.email}'
+        return f'{self.client_name}, email. {self.email}'
 
     class Meta:
         """Организация вывода, индексы."""
