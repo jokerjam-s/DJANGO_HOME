@@ -1,50 +1,28 @@
-from django.shortcuts import render
+from work_01_app.models import Client, Order, Product, OrderProducts
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from work_01_app.models import Client
 
 
 def index(request):
     """Главная страница."""
-    html = ("<a href='/'>Home</a>&nbsp;&nbsp;"
-            "<a href='/about/'>About</a>&nbsp;&nbsp;"
-            "<a href='/clients'>Clients</a>"
-            "<h1>Hello, guest!</h1>"
-            "<p>This is my first Django project.</p>"
-            "<p>If you can see this text - I'm on the right way!</p>"
-            )
-    return HttpResponse(html)
+    return render(request, 'work_01_app/base.html')
 
 
 def about(request):
     """Страница About."""
-    html = ("<a href='/'>Home</a>&nbsp;&nbsp;"
-            "<a href='/about/'>About</a>&nbsp;&nbsp;"
-            "<a href='/clients'>Clients</a>"
-            "<h1>About me.</h2>"
-            "<h3>Hello! I'm Andrey.</h3>"
-            "<p>This html page is part of my first django application.</p>"
-            "<p>I'm learning python development.</p>"
-            )
-    return HttpResponse(html)
+    return render(request, 'work_01_app/about.html')
 
 
 def clients_list(request):
     """Список клиентов."""
     clients = Client.objects.all()
+    content = {'clients': clients }
+    return render(request, 'work_01_app/clients_list.html', content)
 
-    html = ("<a href='/'>Home</a>&nbsp;&nbsp;"
-            "<a href='/about/'>About</a>&nbsp;&nbsp;"
-            "<a href='/clients'>Clients</a>"
-            "<h1>Clients list</h2>"
-            "<table>"
-            "<tr><td>Name</td><td>E-mail</td><td>Phone</td><td>Address</td></tr>"
-            )
-    for client in clients:
-        html += ("<tr>"
-                 f"<td>{client.client_name}</td>"
-                 f"<td>{client.email}</td>"
-                 f"<td>{client.phone}</td>"
-                 f"<td>{client.address}</td>"
-                 "</tr>")
-    html += "</table>"
-    return HttpResponse(html)
+
+def client_orders(request, client_id):
+    """Отображение заказов пользователя."""
+    client = get_object_or_404(Client, pk=client_id)
+    orders = Order.objects.filter(client_id=client_id)
+    # orders_prod = [OrderProducts.objects.filter(order_id=order.pk) for order in orders]
+    return HttpResponse(f'{orders[0].products}')

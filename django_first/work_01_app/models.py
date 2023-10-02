@@ -48,7 +48,17 @@ class Order(models.Model):
     order_date = models.DateField(auto_now_add=True)
     cost = models.DecimalField(max_digits=10, decimal_places=2, default=0, validators=[MinValueValidator(0)])
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
-    products = models.ManyToManyField(Product)
+    products = models.ManyToManyField(Product, through='OrderProducts')
 
     def __str__(self):
         return f'{self.pk} - {self.order_date}'
+
+
+class OrderProducts(models.Model):
+    """Количественный состав заказа по продуктам."""
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    product_count = models.IntegerField(default=1, validators=[MinValueValidator(1)])
+
+    def __str__(self):
+        return f'{self.order.primary_key}. {self.product.name} - {self.product_count}'
