@@ -1,9 +1,36 @@
 {% extends 'work_01_app/base.html' %}
 
 {% block title %}
-Заказы пользователя
+Заказы пользователя {{ client.client_name }}
 {% endblock %}
 
 {% block content %}
+<h1><small class="text-muted">Заказы пользователя</small> {{ client.client_name }}</h1>
+
+{% if orders %}
+<div class="accordion" id="accordionExample">
+{% for ord in orders %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                Заказ {{ ord.order.id }} от {{ ord.order.order_date }} на сумму {{ ord.order.cost }}
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+             data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>Это тело аккордеона первого элемента.</strong> По умолчанию оно скрыто, пока плагин сворачивания
+                не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы
+                управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете
+                изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит
+                отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход
+                ограничивает переполнение.
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endif %}
 
 {% endblock %}

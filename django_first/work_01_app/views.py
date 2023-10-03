@@ -16,13 +16,20 @@ def about(request):
 def clients_list(request):
     """Список клиентов."""
     clients = Client.objects.all()
-    content = {'clients': clients }
-    return render(request, 'work_01_app/clients_list.html', content)
+    context = {'clients': clients}
+    return render(request, 'work_01_app/clients_list.html', context)
 
 
 def client_orders(request, client_id):
     """Отображение заказов пользователя."""
     client = get_object_or_404(Client, pk=client_id)
-    orders = Order.objects.filter(client_id=client_id)
-    # orders_prod = [OrderProducts.objects.filter(order_id=order.pk) for order in orders]
-    return HttpResponse(f'{orders[0].products}')
+    # orders = Order.objects.prefetch_related('products').select_related('order_prods').filter(client_id=client_id)
+
+    order_prods = OrderProducts.objects.select_related('product').select_related('order').filter(
+        order__client_id=client_id).order_by('-order__pk')
+    context = {
+        'client': client,
+        'orders': order_prods,
+    }
+
+    return render(request, 'work_01_app/client_orders.html', context)
