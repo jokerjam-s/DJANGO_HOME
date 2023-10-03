@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fce70bd1-6474-435c-8010-993a2c9918ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c20afacd-b489-4c02-b2f4-6a8d1905ab2d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c20afacd-b489-4c02-b2f4-6a8d1905ab2d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/management/commands/fill_test_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/management/commands/fill_test_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/templates/work_01_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/templates/work_01_app/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_first/work_01_app/templates/work_01_app/client_orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/templates/work_01_app/client_orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_first/work_01_app/templates/work_01_app/clients_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/templates/work_01_app/clients_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_first/work_01_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/views.py" afterDir="false" />
@@ -28,6 +33,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -87,6 +95,8 @@
       <workItem from="1696267286012" duration="1529000" />
       <workItem from="1696270691172" duration="2693000" />
       <workItem from="1696273443171" duration="7740000" />
+      <workItem from="1696311651349" duration="13456000" />
+      <workItem from="1696328439167" duration="8061000" />
     </task>
     <servers />
   </component>

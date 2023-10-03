@@ -60,15 +60,19 @@ class Command(BaseCommand):
         # заполнение заказов продуктами
         start = datetime.strptime('01.01.2023', '%d.%m.%Y')
         end = datetime.strptime('01.01.2024', '%d.%m.%Y')
+
         for order in orders:
             prod_in_order = random.randint(1, products_count)
             order.order_date = self.get_random_date(start, end)
+            print(f'{order.pk} - {order.cost}')
             for _ in range(prod_in_order):
                 prod = random.choice(products)
-                if OrderProducts.objects.filter(order_id=order.pk, product_id=prod.pk).first() is None:
-                    prod_cnt = random.randint(1, MAX_PRODUCTS)
-                    order_prod = OrderProducts.objects.create(order=order, product=prod, product_count=prod_cnt)
-                    order.cost += order_prod.product_count * prod.price
+                # if OrderProducts.objects.filter(order_id=order.pk, product_id=prod.pk).first() is None:
+                prod_cnt = random.randint(1, MAX_PROD_IN_ORDER)
+                order_prod = OrderProducts(order=order, product=prod, product_count=prod_cnt)
+                order_prod.save()
+                order.cost += prod_cnt * prod.price
+                print(f'{order.pk} - {order.cost} += {prod_cnt} * {prod.price}')
             order.save()
 
         self.stdout.write('Test data was created.')

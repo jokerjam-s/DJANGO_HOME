@@ -3,7 +3,7 @@
   <component name="Black">
     <option name="executionMode" value="BINARY" />
     <option name="pathToExecutable" value="C:\Program Files\Python311\Scripts\black.exe" />
-    <option name="sdkUUID" value="e039ca3f-9cc3-4bb0-a465-29b7cf57453c" />
+    <option name="sdkName" value="Python 3.11 (DJANGO_HOME)" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (DJANGO_HOME)" project-jdk-type="Python SDK" />
 </project>

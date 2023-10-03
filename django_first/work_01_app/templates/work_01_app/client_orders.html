@@ -8,29 +8,52 @@
 <h1><small class="text-muted">Заказы пользователя</small> {{ client.client_name }}</h1>
 
 {% if orders %}
-<div class="accordion" id="accordionExample">
-{% for ord in orders %}
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                Заказ {{ ord.order.id }} от {{ ord.order.order_date }} на сумму {{ ord.order.cost }}
-            </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-             data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <strong>Это тело аккордеона первого элемента.</strong> По умолчанию оно скрыто, пока плагин сворачивания
-                не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы
-                управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете
-                изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит
-                отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход
-                ограничивает переполнение.
+<div class="accordion accordion-flush" id="accordionOrders">
+    {% for ord in orders %}
+        {% ifchanged ord.order.id %}
+            {% if not forloop.first %}
+                                </table>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading{{ ord.order.id }}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse{{ ord.order.id }}" aria-expanded="false" aria-controls="flush-collapse{{ ord.order.id }}">
+                    Заказ {{ ord.order.id }} от {{ ord.order.order_date }} на сумму&nbsp;<strong>{{ ord.order.cost }}</strong>
+                </button>
+            </h2>
+            <div id="flush-collapse{{ ord.order.id }}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ ord.order.id }}"
+                 data-bs-parent="#accordionOrders">
+                <div class="accordion-body">
+                        <table class="table table-sm table-responsive table-hover table-bordered table-warning">
+                            <thead>
+                                <th>Product</th>
+                                <th>Count</th>
+                                <th>Price</th>
+                            </thead>
+                        <tr>
+                            <td>{{ ord.product.prod_name }}</td>
+                            <td>{{ ord.product_count }}</td>
+                            <td>{{ ord.product.price }}</td>
+                        </tr>
+        {% else %}
+                        <tr>
+                            <td>{{ ord.product.prod_name }}</td>
+                            <td>{{ ord.product_count }}</td>
+                            <td>{{ ord.product.price }}</td>
+                        </tr>
+        {% endifchanged %}
+    {% endfor %}
+                    </table>
             </div>
         </div>
     </div>
-{% endfor %}
 </div>
+{% else %}
+    <div class="alert-warning">Данные отсутствуют!</div>
 {% endif %}
 
 {% endblock %}

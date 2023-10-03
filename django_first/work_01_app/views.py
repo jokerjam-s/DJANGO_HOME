@@ -26,7 +26,8 @@ def client_orders(request, client_id):
     # orders = Order.objects.prefetch_related('products').select_related('order_prods').filter(client_id=client_id)
 
     order_prods = OrderProducts.objects.select_related('product').select_related('order').filter(
-        order__client_id=client_id).order_by('-order__pk')
+        order__client_id=client_id).order_by('-order_id', )
+
     context = {
         'client': client,
         'orders': order_prods,
