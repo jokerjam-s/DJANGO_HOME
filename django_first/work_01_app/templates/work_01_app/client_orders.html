@@ -1,11 +1,11 @@
 {% extends 'work_01_app/base.html' %}
 
 {% block title %}
-Заказы пользователя {{ client.client_name }}
+Заказы пользователя {{ client_name }}
 {% endblock %}
 
 {% block content %}
-<h1><small class="text-muted">Заказы пользователя</small> {{ client.client_name }}</h1>
+<h1><small class="text-muted">Заказы пользователя</small> {{ client_name }}</h1>
 
 {% if orders %}
 <div class="accordion accordion-flush" id="accordionOrders">
@@ -30,20 +30,23 @@
                 <div class="accordion-body">
                         <table class="table table-sm table-responsive table-hover table-bordered table-warning">
                             <thead>
-                                <th>Product</th>
-                                <th>Count</th>
-                                <th>Price</th>
+                                <th>Товар</th>
+                                <th>Количество</th>
+                                <th>Цена</th>
+                                <th>Итого</th>
                             </thead>
                         <tr>
                             <td>{{ ord.product.prod_name }}</td>
                             <td>{{ ord.product_count }}</td>
                             <td>{{ ord.product.price }}</td>
+                            <td>{{ ord.prod_cost }}</td>
                         </tr>
         {% else %}
                         <tr>
                             <td>{{ ord.product.prod_name }}</td>
                             <td>{{ ord.product_count }}</td>
                             <td>{{ ord.product.price }}</td>
+                            <td>{{ ord.prod_cost }}</td>
                         </tr>
         {% endifchanged %}
     {% endfor %}

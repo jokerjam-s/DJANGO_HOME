@@ -1,0 +1,37 @@
+{% extends 'work_01_app/base.html' %}
+
+{% block title%}
+Покупки пользователя
+{% endblock %}
+
+{% block content %}
+    <h1>Покупки клиента {{ client_name }}</h1>
+    <h3>{{ period }}</h3>
+
+    {% if products %}
+    <table class="table table-sm table-hover table-active">
+        <thead>
+            <tr>
+                <td>Наименование</td>
+                <td>Цена</td>
+                <td>Кол-во</td>
+                <td>Стоимость</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prod in products %}
+            <tr>
+                <td>{{ prod.product__prod_name }}</td>
+                <td>{{ prod.product__price }}</td>
+                <td>{{ prod.count_prod }}</td>
+                <td>{{ prod.cost }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+    {% else %}
+    <div class="alert alert-warning">Нет данных!</div>
+    {% endif %}
+
+{% endblock %}

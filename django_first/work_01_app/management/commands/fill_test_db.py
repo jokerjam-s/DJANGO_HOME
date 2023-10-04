@@ -64,15 +64,12 @@ class Command(BaseCommand):
         for order in orders:
             prod_in_order = random.randint(1, products_count)
             order.order_date = self.get_random_date(start, end)
-            print(f'{order.pk} - {order.cost}')
             for _ in range(prod_in_order):
                 prod = random.choice(products)
                 # if OrderProducts.objects.filter(order_id=order.pk, product_id=prod.pk).first() is None:
                 prod_cnt = random.randint(1, MAX_PROD_IN_ORDER)
-                order_prod = OrderProducts(order=order, product=prod, product_count=prod_cnt)
-                order_prod.save()
+                OrderProducts.create(order=order, product=prod, product_count=prod_cnt)
                 order.cost += prod_cnt * prod.price
-                print(f'{order.pk} - {order.cost} += {prod_cnt} * {prod.price}')
             order.save()
 
         self.stdout.write('Test data was created.')
