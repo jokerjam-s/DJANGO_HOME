@@ -26,10 +26,11 @@ class Client(models.Model):
 class Product(models.Model):
     """Товары, реализуемые в магазине."""
     prod_name = models.CharField(max_length=250, null=False)
-    description = models.TextField(null=True)
+    description = models.TextField(null=True, default=None)
     price = models.DecimalField(max_digits=8, decimal_places=2, default=0, validators=[MinValueValidator(0)])
     prod_count = models.IntegerField(default=0, validators=[MinValueValidator(0)])
     append_date = models.DateTimeField(auto_now=True)  # фиксируем последнее изменение
+    photo = models.ImageField(upload_to='media/', null=True, default=None)
 
     def __str__(self):
         return f'{self.prod_name}, наличие: {self.prod_count}, цена: {self.price}'
