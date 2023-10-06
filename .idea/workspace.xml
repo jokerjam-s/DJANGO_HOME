@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fce70bd1-6474-435c-8010-993a2c9918ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/django_first/media/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django_first/work_01_app/templates/work_01_app/products_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_first/django_first/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/django_first/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/management/commands/fill_test_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/management/commands/fill_test_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/templates/work_01_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/templates/work_01_app/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_first/work_01_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_first/work_01_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -100,6 +100,7 @@
       <workItem from="1696399523604" duration="1199000" />
       <workItem from="1696414025669" duration="3009000" />
       <workItem from="1696576999142" duration="1761000" />
+      <workItem from="1696596477199" duration="7637000" />
     </task>
     <servers />
   </component>

@@ -7,4 +7,6 @@ urlpatterns = [
     path('clients/', views.clients_list, name='clients'),
     path('clients/orders/<int:client_id>', views.client_orders, name='client_orders'),
     path('clients/products/<int:client_id>/<int:days_history>', views.client_prods, name='client_prods'),
+    path('products/', views.products_list, name='products_list'),
+    path('products/<slug:show_no_del>', views.products_list, name='products_list'),
 ]

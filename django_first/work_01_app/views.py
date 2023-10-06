@@ -79,3 +79,17 @@ def period(days: int) -> str:
         case 365:
             return 'за последний год'
     return 'за произвольный период'
+
+
+def products_list(request):
+    """Отображение списка продуктов."""
+    products = Product.objects.all()
+
+    show_no_del = False
+
+    context = {
+        "products": products,
+        "show_no_del": show_no_del,
+    }
+
+    return render(request, "work_01_app/products_list.html", context)
