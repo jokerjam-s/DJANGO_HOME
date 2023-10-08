@@ -15,10 +15,10 @@
     <div class="container-fluid">
         <section>
             <nav class="nav">
-              <a class="nav-link" href="/">Главная</a>
-              <a class="nav-link" href="/clients">Клиенты</a>
-              <a class="nav-link" href="/products">Список товаров</a>
-              <a class="nav-link" href="/about">Обо мне</a>
+              <a class="nav-link" href="{% url 'index' %}">Главная</a>
+              <a class="nav-link" href="{% url 'clients' %}">Клиенты</a>
+              <a class="nav-link" href="{% url 'products' %}">Список товаров</a>
+              <a class="nav-link" href="{% url 'about' %}">Обо мне</a>
             </nav>
         </section>
 

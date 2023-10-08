@@ -1,0 +1,16 @@
+{% extends 'work_01_app/base.html' %}
+
+{% block title %}
+Информация о товаре
+{% endblock %}
+
+{% block content %}
+    <div>
+        <p>Наименование: {{ prod.prod_name }}</p>
+        <p>Описание: {{ prod.description }}</p>
+        <p>Цена: {{ prod.price }}</p>
+        <p>Количество: {{ prod.prod_count }}</p>
+        <p>Добавлен: {{ prod.append_date }}</p>
+    </div>
+    <a class="btn btn-info" href="{% url 'products' %}">К списку</a>
+{% endblock %}

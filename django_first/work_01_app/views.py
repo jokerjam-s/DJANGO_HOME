@@ -1,10 +1,11 @@
 from datetime import date, timedelta
 
+from django.core.files.storage import FileSystemStorage
 from django.db.models import Sum, F
+from django.shortcuts import render, get_object_or_404, redirect
 
+from work_01_app.forms import ProductForm
 from work_01_app.models import Client, Order, Product, OrderProducts
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
 
 
 def index(request):
@@ -21,7 +22,8 @@ def clients_list(request):
     """Список клиентов."""
     clients = Client.objects.all()
     context = {'clients': clients}
-    return render(request, 'work_01_app/clients_list.html', context)
+    # req_url = reverse('clients', args=(context, ))
+    return render(request, 'work_01_app/clients_list.html', context=context)
 
 
 def client_orders(request, client_id):
@@ -81,11 +83,13 @@ def period(days: int) -> str:
     return 'за произвольный период'
 
 
-def products_list(request):
-    """Отображение списка продуктов."""
-    products = Product.objects.all()
+def products_list(request, show_no_del: str = 'no'):
+    """
+    Отображение списка продуктов.
 
-    show_no_del = False
+    :show_no_del: признак отображения сообщения.
+    """
+    products = Product.objects.all()
 
     context = {
         "products": products,
@@ -93,3 +97,69 @@ def products_list(request):
     }
 
     return render(request, "work_01_app/products_list.html", context)
+
+
+def product_delete(request):
+    """
+    Удаление товара. После завершения операции переходит в список товаров.
+    В зависимости от результата возвращает параметр для отображения сообщения пользователю.
+    """
+    if request.method == 'POST':
+        prod_id = request.POST.get('prod_id')
+        prod = get_object_or_404(Product, pk=prod_id)
+
+        if OrderProducts.objects.filter(product_id=prod.pk).exists():
+            responce = redirect('products', 'yes')
+        else:
+            prod.delete()
+            responce = redirect('products')
+    else:
+        responce = redirect('index')
+
+    return responce
+
+
+def product_create(request):
+    """Запрос на создание нового товара."""
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            photo = form.cleaned_data['photo']
+            fs = FileSystemStorage()
+            fs.save(photo.name, photo)
+
+            Product.objects.create(**form.cleaned_data)
+            return redirect('products')
+    else:
+        form = ProductForm()
+
+    return render(request, 'work_01_app/product_create.html', {'title': 'Новый товар', 'form': form})
+
+
+def product_edit(request, prod_id: int = None):
+    """Редактирование товара."""
+    prod = get_object_or_404(Product, pk=prod_id)
+    if request.method == 'GET':
+        form = ProductForm(instance=prod)
+        context = {
+            'title': 'Изменить товар',
+            "prod_id": prod_id,
+            "form": form,
+        }
+        return render(request, 'work_01_app/product_create.html', context)
+    else:
+        form = ProductForm(request.POST, request.FILES, instance=prod)
+        if form.is_valid():
+            photo = form.cleaned_data['photo']
+            fs = FileSystemStorage()
+            fs.save(photo.name, photo)
+            form.save()
+
+    return redirect('products')
+
+
+def product_info(request, prod_id: int):
+    """Информация о товаре."""
+    prod = get_object_or_404(Product, pk=prod_id)
+
+    return render(request, 'work_01_app/product_info.html', {'prod': prod})

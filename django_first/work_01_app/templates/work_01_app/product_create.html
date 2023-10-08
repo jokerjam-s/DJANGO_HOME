@@ -1,0 +1,21 @@
+{% extends 'work_01_app/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if prod_id %}
+        <input type="hidden" name="prod_id" value="{{ prod_id }}">
+    {% endif %}
+
+    {{ form.as_div }}
+    <button class="btn btn-success" type="submit">Сохранить</button>
+    &nbsp;
+    <a class="btn btn-info" href="{% url 'products' %}">Отмена</a>
+</form>
+{% endblock %}
