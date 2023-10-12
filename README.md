@@ -114,3 +114,9 @@ HTML-вёрсткой и данными о вашем первом Django-сай
 
 ## Работа с административной панелью
 
+![](img_readme/img_13.png)
+
+![](img_readme/img_14.png)
+
+![](img_readme/img_15.png)
+
